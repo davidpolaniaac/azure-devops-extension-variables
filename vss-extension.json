@@ -1,0 +1,37 @@
+{
+    "manifestVersion": 1,
+    "id": "devops-variables-pipelines",
+    "name": "DevOps - Variables",
+    "version": "0.0.29",
+    "publisher": "dpolania",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Tools for building/releasing with DevOps. Includes build/release tasks.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "scopes": ["vso.release_manage"],
+    "files": [
+        {
+            "path": "setVariables"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "devops-set-variables-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "setVariables"
+            }
+        }
+    ]
+}
