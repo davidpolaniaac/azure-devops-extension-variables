@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "devops-variables-pipelines",
     "name": "DevOps - Variables",
-    "version": "0.0.29",
+    "version": "0.0.33",
     "publisher": "dpolania",
     "targets": [
         {
@@ -20,6 +20,9 @@
     "files": [
         {
             "path": "setVariables"
+        },
+        {
+            "path": "base64Variable"
         }
     ],
     "contributions": [
@@ -31,6 +34,16 @@
             ],
             "properties": {
                 "name": "setVariables"
+            }
+        },
+        {
+            "id": "devops-show-base64-variables-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "base64Variable"
             }
         }
     ]
