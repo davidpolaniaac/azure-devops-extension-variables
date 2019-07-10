@@ -4,10 +4,11 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "fileCreator": "cd fileCreator && npm install && tsc",
         "file": "cd filecontenttovariable && npm install && tsc",
         "variable": "cd setVariables && npm install && tsc",
         "base64": "cd base64Variable && npm install && tsc",
-        "build": "npm run file && npm run variable && npm run base64",
+        "build": "npm run file && npm run variable && npm run base64 && npm run fileCreator",
         "postbuild": "tfx extension create --manifest-globs vss-extension.json --output-path dist --rev-version",
         "publish": "npm run-script build && tfx extension publish --manifest-globs vss-extension.json --share-with %VSTS_ACCOUNT% --output-path dist -t %PAT%",
         "test": "jest"

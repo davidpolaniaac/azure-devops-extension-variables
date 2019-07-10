@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "devops-variables-pipelines",
     "name": "DevOps - Variables",
-    "version": "0.0.34",
+    "version": "0.0.36",
     "publisher": "dpolania",
     "targets": [
         {
@@ -26,9 +26,22 @@
         },
         {
             "path": "filecontenttovariable"
+        },
+        {
+            "path": "fileCreator"
         }
     ],
     "contributions": [
+        {
+            "id": "devops-file-create",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "fileCreator"
+            }
+        },
         {
             "id": "devops-file-to-variables",
             "type": "ms.vss-distributed-task.task",
